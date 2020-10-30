@@ -4,17 +4,17 @@ splatnet2statink-docker
 The unofficial Docker image for [splatnet2statink](https://github.com/frozenpandaman/splatnet2statink).
 
 This repository just keeps track of the original tool repository and builds an image to let it run as a containerized application.
-Since this isn't the official tool repository so please go to the original repository if you want to read the document of the tool or report something such as a bug-report.
+Since this isn't the official tool repository so please go to the original if you want to read the document of the tool or send a bug-report or something.
 
 ## How to use
 
-If you have the `config.txt` file for splatnet2statink, just hit: 
+If you have the `config.txt` file for splatnet2statink, you can pass it via the variable `SPLATNET2STATINK_CONFIG`: 
 
 ```
 $ s2scfg=$(cat config.txt) && docker run -it --rm -e SPLATNET2STATINK_CONFIG=$s2scfg isseim/splatnet2statink:v1.5.6
 ```
 
-Of course, some options for the tool such as `-r` are available. 
+Of course, some options for the command such as `-r` are available.
 
 **If you don't have the configuration file, you can create it by the following steps:**
 
