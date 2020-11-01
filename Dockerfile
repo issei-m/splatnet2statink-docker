@@ -4,7 +4,6 @@ ARG SPLATNET2STATINK_VERSION="1.5.6"
 
 RUN apk --update --no-cache add build-base zlib-dev jpeg-dev
 
-RUN echo $SPLATNET2STATINK_VERSION
 RUN cd /tmp; wget https://github.com/frozenpandaman/splatnet2statink/archive/v$SPLATNET2STATINK_VERSION.tar.gz \
     && tar xzf v$SPLATNET2STATINK_VERSION.tar.gz \
     && mv /tmp/splatnet2statink-$SPLATNET2STATINK_VERSION /opt/app
