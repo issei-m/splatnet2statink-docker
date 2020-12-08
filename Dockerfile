@@ -1,6 +1,6 @@
-FROM python:3.6-alpine3.12 as build
+FROM python:3.9-alpine3.12 as build
 
-ARG SPLATNET2STATINK_VERSION="1.5.6"
+ARG SPLATNET2STATINK_VERSION="1.5.7"
 
 RUN apk --update --no-cache add build-base zlib-dev jpeg-dev
 
@@ -20,11 +20,11 @@ RUN echo '{"api_key":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","cookie":"","
 # Cleanup
 RUN rm .gitignore requirements.txt
 
-FROM python:3.6-alpine3.12 as package
+FROM python:3.9-alpine3.12 as package
 
 WORKDIR /opt/app
 
-COPY --from=build /usr/local/lib/python3.6/site-packages /usr/local/lib/python3.6/site-packages
+COPY --from=build /usr/local/lib/python3.9/site-packages /usr/local/lib/python3.9/site-packages
 COPY entrypoint.sh /entrypoint.sh
 COPY --from=build /opt/app /opt/app
 
