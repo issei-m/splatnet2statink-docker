@@ -1,12 +1,12 @@
 FROM python:3.9-alpine3.12 as build
 
-ARG SPLATNET2STATINK_VERSION="1.5.10"
+ARG SPLATNET2STATINK_VERSION="1.5.11"
 
 RUN apk --update --no-cache add build-base zlib-dev jpeg-dev
 
-RUN cd /tmp; wget https://github.com/frozenpandaman/splatnet2statink/archive/v$SPLATNET2STATINK_VERSION.tar.gz \
-    && tar xzf v$SPLATNET2STATINK_VERSION.tar.gz \
-    && mv /tmp/splatnet2statink-$SPLATNET2STATINK_VERSION /opt/app
+RUN cd /tmp; wget https://github.com/frozenpandaman/splatnet2statink/archive/refs/tags/v.$SPLATNET2STATINK_VERSION.tar.gz \
+    && tar xzf v.$SPLATNET2STATINK_VERSION.tar.gz \
+    && mv /tmp/splatnet2statink-v.$SPLATNET2STATINK_VERSION /opt/app
 
 WORKDIR /opt/app
 
