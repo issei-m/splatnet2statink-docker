@@ -11,7 +11,7 @@ Since this isn't the official tool repository so please go to the original if yo
 If you have the `config.txt` file for splatnet2statink, you can pass it via the variable `SPLATNET2STATINK_CONFIG`: 
 
 ```
-$ s2scfg=$(cat config.txt) && docker run -it --rm -e SPLATNET2STATINK_CONFIG=$s2scfg isseim/splatnet2statink:v1.5.12
+$ s2scfg=$(cat config.txt) && docker run -it --rm -e SPLATNET2STATINK_CONFIG=$s2scfg isseim/splatnet2statink:v1.5.13
 ```
 
 Of course, some options for the command such as `-r` are available.
@@ -21,14 +21,14 @@ Of course, some options for the command such as `-r` are available.
 1. Hit this, it will start interacting you to create a new config file
 
 ```
-$ docker run -it --name s2s-for-configuration --rm isseim/splatnet2statink:v1.5.12 -t
+$ docker run -it --name s2s-for-configuration --rm isseim/splatnet2statink:v1.5.13 -t
 ```
 
 2. Fill the values along questions the tool asked you
 3. Once configuration finished, the tool will interact you again like this:
 
 ```
-splatnet2statink v1.5.12
+splatnet2statink v1.5.13
 Pulling data from online...
 Number of recent battles to upload (0-50)?
 ``` 
