@@ -1,6 +1,6 @@
-FROM python:3.9-alpine3.12 as build
+FROM python:3.9-alpine3.14 as build
 
-ARG SPLATNET2STATINK_VERSION="1.7.0"
+ARG SPLATNET2STATINK_VERSION="1.7.1"
 
 RUN apk --update --no-cache add build-base zlib-dev jpeg-dev
 
@@ -20,7 +20,7 @@ RUN echo '{"api_key":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","cookie":"","
 # Cleanup
 RUN rm .gitignore requirements.txt
 
-FROM python:3.9-alpine3.12 as package
+FROM python:3.9-alpine3.14 as package
 
 WORKDIR /opt/app
 
