@@ -1,6 +1,6 @@
 FROM python:3.9-alpine3.14 as build
 
-ARG SPLATNET2STATINK_VERSION="1.7.1"
+ARG SPLATNET2STATINK_VERSION="1.7.2"
 
 RUN apk --update --no-cache add build-base zlib-dev jpeg-dev
 
